@@ -33,7 +33,6 @@ benchmark "well_architected_framework_sec06_bp01" {
 
   tags = merge(local.well_architected_framework_sec06_common_tags, {
     choice_id = "sec_protect_compute_vulnerability_management"
-    severity  = "high"
   })
 }
 
@@ -48,7 +47,6 @@ benchmark "well_architected_framework_sec06_bp02" {
 
   tags = merge(local.well_architected_framework_sec06_common_tags, {
     choice_id = "sec_protect_compute_reduce_surface"
-    severity  = "high"
   })
 }
 
@@ -62,7 +60,6 @@ benchmark "well_architected_framework_sec06_bp03" {
 
   tags = merge(local.well_architected_framework_sec06_common_tags, {
     choice_id = "sec_protect_compute_implement_managed_services"
-    severity  = "medium"
   })
 }
 
@@ -78,7 +75,6 @@ benchmark "well_architected_framework_sec06_bp04" {
 
   tags = merge(local.well_architected_framework_sec06_common_tags, {
     choice_id = "sec_protect_compute_auto_protection"
-    severity  = "medium"
   })
 }
 
@@ -94,7 +90,6 @@ benchmark "well_architected_framework_sec06_bp05" {
 
   tags = merge(local.well_architected_framework_sec06_common_tags, {
     choice_id = "sec_protect_compute_actions_distance"
-    severity  = "low"
   })
 }
 
@@ -110,6 +105,5 @@ benchmark "well_architected_framework_sec06_bp06" {
 
   tags = merge(local.well_architected_framework_sec06_common_tags, {
     choice_id = "sec_protect_compute_validate_software_integrity"
-    severity  = "low"
   })
 }

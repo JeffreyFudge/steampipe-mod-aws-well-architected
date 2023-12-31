@@ -30,7 +30,6 @@ benchmark "well_architected_framework_sec08_bp01" {
 
   tags = merge(local.well_architected_framework_sec08_common_tags, {
     choice_id = "sec_protect_data_rest_key_mgmt"
-    severity  = "high"
   })
 }
 
@@ -60,7 +59,6 @@ benchmark "well_architected_framework_sec08_bp02" {
 
   tags = merge(local.well_architected_framework_sec08_common_tags, {
     choice_id = "sec_protect_data_rest_encrypt"
-    severity  = "high"
   })
 }
 
@@ -78,7 +76,6 @@ benchmark "well_architected_framework_sec08_bp03" {
 
   tags = merge(local.well_architected_framework_sec08_common_tags, {
     choice_id = "sec_protect_data_rest_automate_protection"
-    severity  = "medium"
   })
 }
 
@@ -93,6 +90,5 @@ benchmark "well_architected_framework_sec08_bp04" {
 
   tags = merge(local.well_architected_framework_sec08_common_tags, {
     choice_id = "sec_protect_data_rest_access_control"
-    severity  = "low"
   })
 }

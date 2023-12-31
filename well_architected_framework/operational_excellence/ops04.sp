@@ -32,7 +32,6 @@ benchmark "well_architected_framework_ops04_bp01" {
 
   tags = merge(local.well_architected_framework_ops04_common_tags, {
     choice_id = "ops_telemetry_application_telemetry"
-    severity  = "high"
   })
 }
 
@@ -50,6 +49,5 @@ benchmark "well_architected_framework_ops04_bp02" {
 
   tags = merge(local.well_architected_framework_ops04_common_tags, {
     choice_id = "ops_telemetry_workload_telemetry"
-    severity  = "high"
   })
 }

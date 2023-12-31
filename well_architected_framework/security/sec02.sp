@@ -33,7 +33,6 @@ benchmark "well_architected_framework_sec02_bp01" {
 
   tags = merge(local.well_architected_framework_sec02_common_tags, {
     choice_id = "sec_identities_enforce_mechanisms"
-    severity  = "high"
   })
 }
 
@@ -51,7 +50,6 @@ benchmark "well_architected_framework_sec02_bp02" {
 
   tags = merge(local.well_architected_framework_sec02_common_tags, {
     choice_id = "sec_identities_unique"
-    severity  = "high"
   })
 }
 
@@ -66,7 +64,6 @@ benchmark "well_architected_framework_sec02_bp03" {
 
   tags = merge(local.well_architected_framework_sec02_common_tags, {
     choice_id = "sec_identities_secrets"
-    severity  = "high"
   })
 }
 
@@ -81,6 +78,5 @@ benchmark "well_architected_framework_sec02_bp05" {
 
   tags = merge(local.well_architected_framework_sec02_common_tags, {
     choice_id = "sec_identities_audit"
-    severity  = "medium"
   })
 }
