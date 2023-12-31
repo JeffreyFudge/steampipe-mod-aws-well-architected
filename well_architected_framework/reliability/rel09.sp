@@ -16,7 +16,7 @@ benchmark "well_architected_framework_rel09" {
 }
 
 benchmark "well_architected_framework_rel09_bp02" {
-  title       = "BP02 Secure and encrypt backups"
+  title       = "REL09 BP02 Secure and encrypt backups"
   description = "Control and detect access to backups using authentication and authorization. Prevent and detect if data integrity of backups is compromised using encryption."
   children = [
     aws_compliance.control.backup_recovery_point_encryption_enabled,
@@ -34,7 +34,7 @@ benchmark "well_architected_framework_rel09_bp02" {
 }
 
 benchmark "well_architected_framework_rel09_bp03" {
-  title       = "BP03 Perform data backup automatically"
+  title       = "REL09 BP03 Perform data backup automatically"
   description = "Control and detect access to backups using authentication and authorization. Prevent and detect if data integrity of backups is compromised using encryption."
   children = [
     aws_compliance.control.backup_recovery_point_manual_deletion_disabled,

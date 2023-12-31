@@ -22,7 +22,7 @@ benchmark "well_architected_framework_sec03" {
 }
 
 benchmark "well_architected_framework_sec03_bp01" {
-  title       = "BP01 Define access requirements"
+  title       = "SEC03 BP01 Define access requirements"
   description = "Each component or resource of your workload needs to be accessed by administrators, end users, or other components. Have a clear definition of who or what should have access to each component, choose the appropriate identity type and method of authentication and authorization."
   children = [
     aws_compliance.control.ec2_instance_uses_imdsv2,
@@ -37,7 +37,7 @@ benchmark "well_architected_framework_sec03_bp01" {
 }
 
 benchmark "well_architected_framework_sec03_bp02" {
-  title       = "BP02 Grant least privilege access"
+  title       = "SEC03 BP02 Grant least privilege access"
   description = "It's a best practice to grant only the access that identities require to perform specific actions on specific resources under specific conditions. Use group and identity attributes to dynamically set permissions at scale, rather than defining permissions for individual users. Users should only have the permissions required to do their job. Users should only be given access to production environments to perform a specific task within a limited time period, and access should be revoked once that task is complete. Permissions should be revoked when no longer needed, including when a user moves onto a different project or job function. Administrator privileges should be given only to a small group of trusted administrators. Permissions should be reviewed regularly to avoid permission creep. Machine or system accounts should be given the smallest set of permissions needed to complete their tasks."
   children = [
     aws_compliance.control.ecs_task_definition_container_readonly_root_filesystem,
@@ -51,7 +51,7 @@ benchmark "well_architected_framework_sec03_bp02" {
 }
 
 benchmark "well_architected_framework_sec03_bp03" {
-  title       = "BP03 Establish emergency access process"
+  title       = "SEC03 BP03 Establish emergency access process"
   description = "A process that allows emergency access to your workload in the unlikely event of an automated process or pipeline issue. This will help you rely on least privilege access, but ensure users can obtain the right level of access when they require it. For example, establish a process for administrators to verify and approve their request, such as an emergency AWS cross-account role for access, or a specific process for administrators to follow to validate and approve an emergency request."
   children = [
     aws_compliance.control.iam_group_not_empty,
@@ -64,7 +64,7 @@ benchmark "well_architected_framework_sec03_bp03" {
 }
 
 benchmark "well_architected_framework_sec03_bp04" {
-  title       = "BP04 Reduce permissions continuously"
+  title       = "SEC03 BP04 Reduce permissions continuously"
   description = "As your teams determine what access is required, remove unneeded permissions and establish review processes to achieve least privilege permissions. Continually monitor and remove unused identities and permissions for both human and machine access. Permission policies should adhere to the least privilege principle. As job duties and roles become better defined, your permission policies need to be reviewed to remove unnecessary permissions. This approach lessens the scope of impact should credentials be inadvertently exposed or otherwise accessed without authorization."
   children = [
     aws_compliance.control.iam_policy_no_star_star,
@@ -76,7 +76,7 @@ benchmark "well_architected_framework_sec03_bp04" {
 }
 
 benchmark "well_architected_framework_sec03_bp05" {
-  title       = "BP05 Define permission guardrails for your organization"
+  title       = "SEC03 BP05 Define permission guardrails for your organization"
   description = "Establish common controls that restrict access to all identities in your organization. For example, you can restrict access to specific AWS Regions, or prevent your operators from deleting common resources, such as an IAM role used for your central security team."
   children = [
     aws_compliance.control.account_part_of_organizations,
@@ -89,7 +89,7 @@ benchmark "well_architected_framework_sec03_bp05" {
 }
 
 benchmark "well_architected_framework_sec03_bp06" {
-  title       = "BP06 Manage access based on lifecycle"
+  title       = "SEC03 BP06 Manage access based on lifecycle"
   description = "Integrate access controls with operator and application lifecycle and your centralized federation provider. For example, remove a user's access when they leave the organization or change roles. AWS RAM, access to shared resources is automatically granted or revoked as accounts are moved in and out of the Organization or Organization Unit with which they are shared. This helps ensure that resources are only shared with the accounts that you intend."
   children = [
     aws_compliance.control.iam_user_unused_credentials_90,
@@ -107,7 +107,7 @@ benchmark "well_architected_framework_sec03_bp06" {
 }
 
 benchmark "well_architected_framework_sec03_bp07" {
-  title       = "BP07 Analyze public and cross-account access"
+  title       = "SEC03 BP07 Analyze public and cross-account access"
   description = "Continually monitor findings that highlight public and cross-account access. Reduce public access and cross-account access to only the specific resources that require this access. Know which of your AWS resources are shared and with whom. Continually monitor and audit your shared resources to verify they are shared with only authorized principals."
   children = [
     aws_compliance.control.dms_replication_instance_not_publicly_accessible,
@@ -145,7 +145,7 @@ benchmark "well_architected_framework_sec03_bp07" {
 }
 
 benchmark "well_architected_framework_sec03_bp08" {
-  title       = "BP08 Share resources securely within your organization"
+  title       = "SEC03 BP08 Share resources securely within your organization"
   description = "As the number of workloads grows, you might need to share access to resources in those workloads or provision the resources multiple times across multiple accounts. You might have constructs to compartmentalize your environment, such as having development, testing, and production environments. However, having separation constructs does not limit you from being able to share securely. By sharing components that overlap, you can reduce operational overhead and allow for a consistent experience without guessing what you might have missed while creating the same resource multiple times."
   children = [
     aws_compliance.control.dms_replication_instance_not_publicly_accessible,

@@ -18,7 +18,7 @@ benchmark "well_architected_framework_sec02" {
 }
 
 benchmark "well_architected_framework_sec02_bp01" {
-  title       = "BP01 Use strong sign-in mechanisms"
+  title       = "SEC01 BP01 Use strong sign-in mechanisms"
   description = "Sign-ins (authentication using sign-in credentials) can present risks when not using mechanisms like multi-factor authentication (MFA), especially in situations where sign-in credentials have been inadvertently disclosed or are easily guessed. Use strong sign-in mechanisms to reduce these risks by requiring MFA and strong password policies."
   children = [
     // TODO: Should we add a control that uses the query iam_root_last_used?
@@ -37,7 +37,7 @@ benchmark "well_architected_framework_sec02_bp01" {
 }
 
 benchmark "well_architected_framework_sec02_bp02" {
-  title       = "BP02 Use temporary credentials"
+  title       = "SEC01 BP02 Use temporary credentials"
   description = "When doing any type of authentication, it’s best to use temporary credentials instead of long-term credentials to reduce or eliminate risks, such as credentials being inadvertently disclosed, shared, or stolen."
   children = [
     aws_compliance.control.iam_user_access_key_age_90,
@@ -54,7 +54,7 @@ benchmark "well_architected_framework_sec02_bp02" {
 }
 
 benchmark "well_architected_framework_sec02_bp03" {
-  title       = "BP03 Store and use secrets securely"
+  title       = "SEC01 BP03 Store and use secrets securely"
   description = "A workload requires an automated capability to prove its identity to databases, resources, and third-party services. This is accomplished using secret access credentials, such as API access keys, passwords, and OAuth tokens. Using a purpose-built service to store, manage, and rotate these credentials helps reduce the likelihood that those credentials become compromised."
   children = [
     aws_compliance.control.cloudformation_stack_output_no_secrets,
@@ -68,7 +68,7 @@ benchmark "well_architected_framework_sec02_bp03" {
 }
 
 benchmark "well_architected_framework_sec02_bp05" {
-  title       = "BP05 Audit and rotate credentials periodically"
+  title       = "SEC01 BP05 Audit and rotate credentials periodically"
   description = "Audit and rotate credentials periodically to limit how long the credentials can be used to access your resources. Long-term credentials create many risks, and these risks can be reduced by rotating long-term credentials regularly."
   children = [
     aws_compliance.control.iam_user_access_key_age_90,

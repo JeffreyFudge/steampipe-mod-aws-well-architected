@@ -18,7 +18,7 @@ benchmark "well_architected_framework_sec05" {
 }
 
 benchmark "well_architected_framework_sec05_bp01" {
-  title       = "BP01 Create network layers"
+  title       = "SEC05 BP01 Create network layers"
   description = "Group components that share sensitivity requirements into layers to minimize the potential scope of impact of unauthorized access. For example, a database cluster in a virtual private cloud (VPC) with no need for internet access should be placed in subnets with no route to or from the internet. Traffic should only flow from the adjacent next least sensitive resource. Consider a web application sitting behind a load balancer. Your database should not be accessible directly from the load balancer. Only the business logic or web server should have direct access to your database."
   children = [
     aws_compliance.control.es_domain_in_vpc,
@@ -43,7 +43,7 @@ benchmark "well_architected_framework_sec05_bp01" {
 }
 
 benchmark "well_architected_framework_sec05_bp02" {
-  title       = "BP02 Control traffic at all layers"
+  title       = "SEC05 BP02 Control traffic at all layers"
   description = "When architecting your network topology, you should examine the connectivity requirements of each component. For example, if a component requires internet accessibility (inbound and outbound), connectivity to VPCs, edge services, and external data centers. A VPC allows you to define your network topology that spans an AWS Region with a private IPv4 address range that you set, or an IPv6 address range AWS selects. You should apply multiple controls with a defense in depth approach for both inbound and outbound traffic, including the use of security groups (stateful inspection firewall), Network ACLs, subnets, and route tables. Within a VPC, you can create subnets in an Availability Zone. Each subnet can have an associated route table that defines routing rules for managing the paths that traffic takes within the subnet. You can define an internet routable subnet by having a route that goes to an internet or NAT gateway attached to the VPC, or through another VPC."
   children = [
     aws_compliance.control.dms_replication_instance_not_publicly_accessible,
@@ -63,7 +63,7 @@ benchmark "well_architected_framework_sec05_bp02" {
 }
 
 benchmark "well_architected_framework_sec05_bp03" {
-  title       = "BP03 Automate network protection"
+  title       = "SEC05 BP03 Automate network protection"
   description = "Automate protection mechanisms to provide a self-defending network based on threat intelligence and anomaly detection. For example, intrusion detection and prevention tools that can adapt to current threats and reduce their impact. A web application firewall is an example of where you can automate network protection, for example, by using the AWS WAF Security Automations solution to automatically block requests originating from IP addresses associated with known threat actors."
   children = [
     aws_compliance.control.dms_replication_instance_not_publicly_accessible,
@@ -91,7 +91,7 @@ benchmark "well_architected_framework_sec05_bp03" {
 }
 
 benchmark "well_architected_framework_sec05_bp04" {
-  title       = "BP04 Implement inspection and protection"
+  title       = "SEC05 BP04 Implement inspection and protection"
   description = "Inspect and filter your traffic at each layer. You can inspect your VPC configurations for potential unintended access using VPC Network Access Analyzer. You can specify your network access requirements and identify potential network paths that do not meet them. For components transacting over HTTP-based protocols, a web application firewall can help protect from common attacks. AWS WAF is a web application firewall that lets you monitor and block HTTP(s) requests that match your configurable rules that are forwarded to an Amazon API Gateway API, Amazon CloudFront, or an Application Load Balancer. To get started with AWS WAF, you can use AWS Managed Rules in combination with your own, or use existing partner integrations."
   children = [
     aws_compliance.control.guardduty_enabled,

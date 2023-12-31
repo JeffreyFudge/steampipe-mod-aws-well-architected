@@ -16,7 +16,7 @@ benchmark "well_architected_framework_rel01" {
 
 
 benchmark "well_architected_framework_rel01_bp03" {
-  title       = "BP03 Accommodate fixed service quotas and constraints through architecture"
+  title       = "REL01 BP03 Accommodate fixed service quotas and constraints through architecture"
   description = "Be aware of unchangeable service quotas, service constraints, and physical resource limits. Design architectures for applications and services to prevent these limits from impacting reliability."
   children = [
     aws_compliance.control.lambda_function_concurrent_execution_limit_configured

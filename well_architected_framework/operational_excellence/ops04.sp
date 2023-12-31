@@ -16,7 +16,7 @@ benchmark "well_architected_framework_ops04" {
 }
 
 benchmark "well_architected_framework_ops04_bp01" {
-  title       = "BP01 Implement application telemetry"
+  title       = "OPS04 BP01 Implement application telemetry"
   description = "Application telemetry is the foundation for observability of your workload. Your application should emit telemetry that provides insight into the state of the application and the achievement of business outcomes. From troubleshooting to measuring the impact of a new feature, application telemetry informs the way you build, operate, and evolve your workload."
 
   children = [
@@ -36,7 +36,7 @@ benchmark "well_architected_framework_ops04_bp01" {
 }
 
 benchmark "well_architected_framework_ops04_bp02" {
-  title       = "BP02 Implement and configure workload telemetry"
+  title       = "OPS04 BP02 Implement and configure workload telemetry"
   description = "Design and configure your workload to emit information about its internal state and current status, for example, API call volume, HTTP status codes, and scaling events. Use this information to help determine when a response is required."
 
   children = [

@@ -16,7 +16,7 @@ benchmark "well_architected_framework_rel07" {
 }
 
 benchmark "well_architected_framework_rel07_bp01" {
-  title       = "BP01 Use automation when obtaining or scaling resources"
+  title       = "REL07 BP01 Use automation when obtaining or scaling resources"
   description = "When replacing impaired resources or scaling your workload, automate the process by using managed AWS services, such as Amazon S3 and AWS Auto Scaling. You can also use third-party tools and AWS SDKs to automate scaling. Managed AWS services include Amazon S3, Amazon CloudFront, AWS Auto Scaling, AWS Lambda, Amazon DynamoDB, AWS Fargate, and Amazon Route 53. AWS Auto Scaling lets you detect and replace impaired instances. It also lets you build scaling plans for resources including Amazon EC2 instances and Spot Fleets, Amazon ECS tasks, Amazon DynamoDB tables and indexes, and Amazon Aurora Replicas."
   children = [
     aws_compliance.control.autoscaling_group_multiple_az_configured,

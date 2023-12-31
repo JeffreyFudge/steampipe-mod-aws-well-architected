@@ -16,7 +16,7 @@ benchmark "well_architected_framework_ops05" {
 }
 
 benchmark "well_architected_framework_ops05_bp03" {
-  title       = "BP03 Use configuration management systems"
+  title       = "OPS05 BP03 Use configuration management systems"
   description = "Use configuration management systems to make and track configuration changes. These systems reduce errors caused by manual processes and reduce the level of effort to deploy changes."
 
   children = [
@@ -29,7 +29,7 @@ benchmark "well_architected_framework_ops05_bp03" {
 }
 
 benchmark "well_architected_framework_ops05_bp05" {
-  title       = "BP05 Perform patch management"
+  title       = "OPS05 BP05 Perform patch management"
   description = "Perform patch management to gain features, address issues, and remain compliant with governance. Automate patch management to reduce errors caused by manual processes, and reduce the level of effort to patch."
 
   children = [

@@ -36,7 +36,7 @@ benchmark "well_architected_framework_rel02_bp01" {
 }
 
 benchmark "well_architected_framework_rel02_bp02" {
-  title       = "BP02 Provision redundant connectivity between private networks in the cloud and on-premises environments"
+  title       = "REL02 BP02 Provision redundant connectivity between private networks in the cloud and on-premises environments"
   description = "Use multiple AWS Direct Connect (DX) connections or VPN tunnels between separately deployed private networks. Use multiple DX locations for high availability. If using multiple AWS Regions, ensure redundancy in at least two of them. You might want to evaluate AWS Marketplace appliances that terminate VPNs. If you use AWS Marketplace appliances, deploy redundant instances for high availability in different Availability Zones."
   children = [
     aws_compliance.control.ec2_instance_in_vpc,
