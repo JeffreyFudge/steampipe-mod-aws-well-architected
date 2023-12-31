@@ -16,7 +16,7 @@ benchmark "well_architected_framework_rel02" {
 }
 
 benchmark "well_architected_framework_rel02_bp01" {
-  title       = "BP01 Use highly available network connectivity for your workload public endpoints"
+  title       = "REL02 BP01 Use highly available network connectivity for your workload public endpoints"
   description = "Building highly available network connectivity to public endpoints of your workloads can help you reduce downtime due to loss of connectivity and improve the availability and SLA of your workload. To achieve this, use highly available DNS, content delivery networks (CDNs), API gateways, load balancing, or reverse proxies."
   children = [
     aws_compliance.control.cloudfront_distribution_configured_with_origin_failover,
