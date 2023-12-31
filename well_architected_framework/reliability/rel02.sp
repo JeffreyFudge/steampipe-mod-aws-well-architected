@@ -32,7 +32,6 @@ benchmark "well_architected_framework_rel02_bp01" {
 
   tags = merge(local.well_architected_framework_rel02_common_tags, {
     choice_id = "rel_planning_network_topology_ha_conn_users"
-    severity  = "high"
   })
 }
 
@@ -50,6 +49,5 @@ benchmark "well_architected_framework_rel02_bp02" {
 
   tags = merge(local.well_architected_framework_rel02_common_tags, {
     choice_id = "rel_planning_network_topology_ha_conn_private_networks"
-    severity  = "high"
   })
 }
