@@ -5,7 +5,7 @@ locals {
 }
 
 benchmark "well_architected_framework_sec04" {
-  title       = "SEC04 How do you detect and investigate security events?"
+  title       = "Security: How do you detect and investigate security events?"
   description = "Capture and analyze events from logs and metrics to gain visibility. Take action on security events and potential threats to help secure your workload."
   children = [
     benchmark.well_architected_framework_sec04_bp01,
@@ -17,7 +17,7 @@ benchmark "well_architected_framework_sec04" {
 }
 
 benchmark "well_architected_framework_sec04_bp01" {
-  title       = "SEC04 BP01 Configure service and application logging"
+  title       = "Security: Configure service and application logging"
   description = "Retain security event logs from services and applications. This is a fundamental principle of security for audit, investigations, and operational use cases, and a common security requirement driven by governance, risk, and compliance (GRC) standards, policies, and procedures.An organization should be able to reliably and consistently retrieve security event logs from AWS services and applications in a timely manner when required to fulfill an internal process or obligation, such as a security incident response. Consider centralizing logs for better operational results."
   children = [
     aws_compliance.control.apigateway_stage_logging_enabled,
@@ -44,7 +44,7 @@ benchmark "well_architected_framework_sec04_bp01" {
 }
 
 benchmark "well_architected_framework_sec04_bp02" {
-  title       = "SEC04 BP02 Analyze logs, findings, and metrics centrally"
+  title       = "Security: Analyze logs, findings, and metrics centrally"
   description = "Security operations teams rely on the collection of logs and the use of search tools to discover potential events of interest, which might indicate unauthorized activity or unintentional change. However, simply analyzing collected data and manually processing information is insufficient to keep up with the volume of information flowing from complex architectures. Analysis and reporting alone don’t facilitate the assignment of the right resources to work an event in a timely fashion."
   children = [
     aws_compliance.control.es_domain_logs_to_cloudwatch,
@@ -63,7 +63,7 @@ benchmark "well_architected_framework_sec04_bp02" {
 }
 
 benchmark "well_architected_framework_sec04_bp03" {
-  title       = "SEC04 BP03 Automate response to events"
+  title       = "Security: Automate response to events"
   description = "Using automation to investigate and remediate events reduces human effort and error, and allows you to scale investigation capabilities. Regular reviews will help you tune automation tools, and continuously iterate. In AWS, investigating events of interest and information on potentially unexpected changes into an automated workflow can be achieved using Amazon EventBridge. This service provides a scalable rules engine designed to broker both native AWS event formats (such as AWS CloudTrail events), as well as custom events you can generate from your application. Amazon GuardDuty also allows you to route events to a workflow system for those building incident response systems (AWS Step Functions), or to a central Security Account, or to a bucket for further analysis."
   children = [
     aws_compliance.control.es_domain_logs_to_cloudwatch,

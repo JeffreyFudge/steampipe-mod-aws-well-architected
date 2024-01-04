@@ -5,7 +5,7 @@ locals {
 }
 
 benchmark "well_architected_framework_rel09" {
-  title       = "REL09 How do you back up data?"
+  title       = "Reliability: How do you back up data?"
   description = "Back up data, applications, and configuration to meet your requirements for recovery time objectives (RTO) and recovery point objectives (RPO)."
   children = [
     benchmark.well_architected_framework_rel09_bp02,
@@ -16,7 +16,7 @@ benchmark "well_architected_framework_rel09" {
 }
 
 benchmark "well_architected_framework_rel09_bp02" {
-  title       = "REL09 BP02 Secure and encrypt backups"
+  title       = "Reliability: Secure and encrypt backups"
   description = "Control and detect access to backups using authentication and authorization. Prevent and detect if data integrity of backups is compromised using encryption."
   children = [
     aws_compliance.control.backup_recovery_point_encryption_enabled,
@@ -34,7 +34,7 @@ benchmark "well_architected_framework_rel09_bp02" {
 }
 
 benchmark "well_architected_framework_rel09_bp03" {
-  title       = "REL09 BP03 Perform data backup automatically"
+  title       = "Reliability: Perform data backup automatically"
   description = "Control and detect access to backups using authentication and authorization. Prevent and detect if data integrity of backups is compromised using encryption."
   children = [
     aws_compliance.control.backup_recovery_point_manual_deletion_disabled,

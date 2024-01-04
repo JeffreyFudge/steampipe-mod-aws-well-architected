@@ -5,7 +5,7 @@ locals {
 }
 
 benchmark "well_architected_framework_rel02" {
-  title       = "REL02 How do you plan your network topology?"
+  title       = "Reliability: How do you plan your network topology?"
   description = "Workloads often exist in multiple environments. These include multiple cloud environments (both publicly accessible and private) and possibly your existing data center infrastructure. Plans must include network considerations such as intra- and inter-system connectivity, public IP address management, private IP address management, and domain name resolution."
   children = [
     benchmark.well_architected_framework_rel02_bp01,
@@ -16,7 +16,7 @@ benchmark "well_architected_framework_rel02" {
 }
 
 benchmark "well_architected_framework_rel02_bp01" {
-  title       = "REL02 BP01 Use highly available network connectivity for your workload public endpoints"
+  title       = "Reliability: Use highly available network connectivity for your workload public endpoints"
   description = "Building highly available network connectivity to public endpoints of your workloads can help you reduce downtime due to loss of connectivity and improve the availability and SLA of your workload. To achieve this, use highly available DNS, content delivery networks (CDNs), API gateways, load balancing, or reverse proxies."
   children = [
     aws_compliance.control.cloudfront_distribution_configured_with_origin_failover,
@@ -36,7 +36,7 @@ benchmark "well_architected_framework_rel02_bp01" {
 }
 
 benchmark "well_architected_framework_rel02_bp02" {
-  title       = "REL02 BP02 Provision redundant connectivity between private networks in the cloud and on-premises environments"
+  title       = "Reliability: Provision redundant connectivity between private networks in the cloud and on-premises environments"
   description = "Use multiple AWS Direct Connect (DX) connections or VPN tunnels between separately deployed private networks. Use multiple DX locations for high availability. If using multiple AWS Regions, ensure redundancy in at least two of them. You might want to evaluate AWS Marketplace appliances that terminate VPNs. If you use AWS Marketplace appliances, deploy redundant instances for high availability in different Availability Zones."
   children = [
     aws_compliance.control.ec2_instance_in_vpc,
